@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .product {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  .product img {
+    max-width: 200px;
+    margin-right: 20px;
+  }
+  .product-info {
+    flex: 1;
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+  .rating input {
+    display: none;
+  }
+  .rating label {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+  }
+  .rating input:checked ~ label {
+    color: gold;
+  }
+  .add-to-cart {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .quantity-label {
+    margin-right: 10px;
+  }
+  .quantity-select {
+    padding: 5px;
+  }
+  .add-to-cart button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="product">
+    <img src="product-image.jpg" alt="Product">
+    <div class="product-info">
+      <h2>Product Name</h2>
+      <div class="rating">
+        <input type="radio" name="rating" id="rating-5" checked>
+        <label for="rating-5">★</label>
+        <input type="radio" name="rating" id="rating-4">
+        <label for="rating-4">★</label>
+        <input type="radio" name="rating" id="rating-3">
+        <label for="rating-3">★</label>
+        <input type="radio" name="rating" id="rating-2">
+        <label for="rating-2">★</label>
+        <input type="radio" name="rating" id="rating-1">
+        <label for="rating-1">★</label>
+      </div>
+      <div class="add-to-cart">
+        <span class="quantity-label">Quantity:</span>
+        <select class="quantity-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
